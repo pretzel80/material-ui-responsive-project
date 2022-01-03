@@ -5,13 +5,36 @@ import {Accessible, Person, PermContactCalendarOutlined} from "@material-ui/icon
 const App = () => {
     return (
         <>
-            <Button variant={"outlined"} color={"primary"} size={"small"} startIcon={<Person/>}>
+            <Button
+                variant={"outlined"}
+                color={"primary"}
+                size={"small"}
+                startIcon={<Person/>}
+            >
                 Material UI
             </Button>
-            <Button variant={"outlined"} color="error" size={"medium"} startIcon={<Accessible/>}>
+            <Button
+                variant={"outlined"}
+                color="error"
+                size={"medium"}
+                startIcon={<Accessible/>}
+            >
                 Material UI
             </Button>
-            <Button variant={"outlined"} color={"secondary"} size={"large"} startIcon={<PermContactCalendarOutlined/>}>
+            <Button
+                variant={"outlined"}
+                color={"secondary"}
+                size={"large"}
+                startIcon={<PermContactCalendarOutlined/>}
+            >
+                Material UI
+            </Button>
+            <Button
+                variant={"contained"}
+                size={"large"}
+                startIcon={<PermContactCalendarOutlined/>}
+                style={{color: "green", backgroundColor: "black"}}
+            >
                 Material UI
             </Button>
         </>
