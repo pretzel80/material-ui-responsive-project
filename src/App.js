@@ -22,7 +22,7 @@ const App = () => {
                 <Grid item sm={2} xs={2}>
                     <LeftBar/>
                 </Grid>
-                <Grid item sm={7} xs={2}>
+                <Grid item sm={7} xs={10}>
                     <Feed/>
                 </Grid>
                 <Grid item sm={3} className={classes.right}>
