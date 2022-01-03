@@ -1,56 +1,35 @@
 import * as React from 'react';
-import Button from "@material-ui/core/Button";
-import {Accessible, Person, PermContactCalendarOutlined} from "@material-ui/icons";
-import {makeStyles} from "@material-ui/core";
+import {Grid, makeStyles} from "@material-ui/core";
+import NavBar from "./components/NavBar";
+import LeftBar from "./components/LeftBar";
+import Feed from "./components/Feed";
+import RightBar from "./components/RightBar";
 
 const useStyles = makeStyles((theme) => ({
-    // button: {
-    //     color: "white",
-    //     backgroundColor: theme.palette.primary.main,
-    // }
-    button: {
-        ...theme.myButton
-    }
+    right: {
+      [theme.breakpoints.down("sm")]: {
+          display: 'none',
+      }
+    },
 }))
 
 const App = () => {
     const classes = useStyles()
     return (
-        <>
-            <Button
-                variant={"outlined"}
-                color={"primary"}
-                size={"small"}
-                startIcon={<Person/>}
-                className={classes.button}
-            >
-                Material UI
-            </Button>
-            <Button
-                variant={"outlined"}
-                color="inherit"
-                size={"medium"}
-                startIcon={<Accessible/>}
-            >
-                Material UI
-            </Button>
-            <Button
-                variant={"outlined"}
-                color={"secondary"}
-                size={"large"}
-                startIcon={<PermContactCalendarOutlined/>}
-            >
-                Material UI
-            </Button>
-            <Button
-                variant={"contained"}
-                size={"large"}
-                startIcon={<PermContactCalendarOutlined/>}
-                style={{color: "green", backgroundColor: "black"}}
-            >
-                Material UI
-            </Button>
-        </>
+        <div>
+            <NavBar/>
+            <Grid container>
+                <Grid item sm={2} xs={2}>
+                    <LeftBar/>
+                </Grid>
+                <Grid item sm={7} xs={2}>
+                    <Feed/>
+                </Grid>
+                <Grid item sm={3} className={classes.right}>
+                    <RightBar/>
+                </Grid>
+            </Grid>
+        </div>
     );
 };
 
