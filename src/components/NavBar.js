@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {alpha, AppBar, Avatar, Badge, InputBase, makeStyles, Toolbar, Typography} from "@material-ui/core";
 import {Search, Mail, Notifications, Cancel} from "@material-ui/icons";
-import {deepPurple} from "@material-ui/core/colors";
 import {useState} from "react";
 
 
